@@ -1,0 +1,291 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #0056b3; 
+    --text-color: #333;
+    --light-bg: #f4f7f6;
+    --dark-bg: #2c3e50;
+    --white-color: #fff;
+    --card-bg: #e9ecef;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+    padding-top: 60px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--white-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    flex-direction: column;
+    text-align: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    display: block;
+    padding: 0.2rem 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+
+.hero {
+    background: url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white-color);
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 1rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--secondary-color);
+}
+
+
+.section {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.section.dark-bg {
+    background-color: var(--dark-bg);
+    color: var(--white-color);
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.section.dark-bg h2 {
+    color: var(--white-color);
+}
+
+
+.info-card, .job-card, .learning-item, .step-card, .learn-card {
+    background-color: var(--white-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.learning-grid, .job-grid, .apply-steps, .learn-more-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.grad-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: left;
+    margin-top: 1.5rem;
+}
+
+.grad-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.apply-btn, .more-jobs-btn, .learn-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 1rem;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.apply-btn, .learn-btn {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.apply-btn:hover, .learn-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.more-jobs-btn {
+    background-color: var(--dark-bg);
+    color: var(--white-color);
+    border: none;
+}
+
+.more-jobs-btn:hover {
+    background-color: #3e536b;
+}
+
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+
+@media (min-width: 768px) {
+    body {
+        padding-top: 80px;
+    }
+    
+    .container {
+        padding: 0 20px;
+    }
+
+
+    .navbar {
+        flex-direction: row;
+        padding: 1rem 2rem;
+    }
+    
+    .logo {
+        margin-bottom: 0;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    .nav-links a {
+        padding: 0;
+    }
+
+
+    .hero {
+        height: 80vh;
+    }
+    
+    .hero h1 {
+        font-size: 4rem;
+    }
+    
+    .hero p {
+        font-size: 1.5rem;
+    }
+
+    .cta-button {
+        padding: 15px 30px;
+    }
+
+
+    .section {
+        padding: 80px 0;
+    }
+
+    .section h2 {
+        font-size: 2.5rem;
+    }
+
+
+    .learning-grid, .job-grid, .apply-steps, .learn-more-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+
+    .grad-info {
+        flex-direction: row;
+    }
+    
+    .grad-info img {
+        width: auto;
+    }
+
+    .apply-btn, .more-jobs-btn, .learn-btn {
+        width: auto;
+    }
+}
